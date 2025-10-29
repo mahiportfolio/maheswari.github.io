@@ -173,53 +173,51 @@
     }
   </style>
   <style>
-/* 🌐 MOBILE OPTIMIZATION & RESPONSIVE DESIGN */
+/* 🌐 Fix Header and Center Alignment on Mobile */
 
-/* General fixes for small screens */
-@media (max-width: 1024px) {
-  header {
-    padding: 15px 25px;
-    flex-wrap: wrap;
-  }
-  nav ul {
-    gap: 12px;
-  }
-}
-
-/* Tablet screens */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 20px;
-  }
-  nav ul {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  .home h2 {
-    font-size: 2rem;
-  }
-  .home p {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-  .about-content {
+  /* Center everything in the header */
+  header {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0;
+  }
+
+  nav li {
+    width: 100%;
     text-align: center;
   }
-  .about-content img {
-    width: 180px;
-    height: 180px;
+
+  /* Portfolio section centered */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 25px;
+    width: 100%;
   }
-  .skills-icons {
-    grid-template-columns: repeat(2, 1fr);
+
+  .project {
+    max-width: 90%;
+    margin: 0 auto;
   }
+
   .project img {
-    max-height: 160px;
+    width: 100%;
+    max-width: 360px;
+    object-fit: contain;
   }
-  .maya-item img {
-    height: 220px;
-  }
+
+  /* Video container fix */
   .video-container {
     flex-direction: column;
     align-items: center;
@@ -228,69 +226,28 @@
     width: 90%;
     height: auto;
   }
-}
 
-/* Mobile screens */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .home {
-    padding: 40px 15px;
-  }
-  .home h2 {
-    font-size: 1.8rem;
-  }
-  .home p {
-    font-size: 0.9rem;
-  }
-  .home a {
-    padding: 8px 18px;
-    font-size: 0.9rem;
-  }
-  .about-content img {
-    width: 150px;
-    height: 150px;
-  }
-  .skills-icons {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .skill-card {
-    padding: 12px;
-  }
-  .project img {
-    max-height: 140px;
-  }
+  /* Centered Maya grid */
   .maya-grid {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
-  .maya-item img {
-    height: 200px;
+
+  .maya-item {
+    width: 90%;
   }
-  .contact p,
-  .hireme-box p {
-    font-size: 0.9rem;
-  }
-  .hireme-box {
-    width: 85%;
+
+  /* Center contact + hire me boxes */
+  .contact, .hireme {
+    text-align: center;
     padding: 20px;
   }
-  footer {
-    font-size: 0.8rem;
+  .hireme-box {
+    width: 90%;
+    margin: 0 auto;
   }
 }
 </style>
-
 </head>
 <body>
   <!-- Header -->
