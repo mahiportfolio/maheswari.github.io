@@ -173,37 +173,41 @@
     }
   </style>
   <style>
-/* 🌐 Fix Header and Center Alignment on Mobile */
+/* 🌐 Fix Header & Make Menu Horizontal on Mobile */
 
 @media (max-width: 768px) {
-  /* Center everything in the header */
   header {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px 0;
   }
 
   nav ul {
-    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     padding: 0;
+    margin-top: 8px;
   }
 
   nav li {
-    width: 100%;
-    text-align: center;
+    display: inline-block;
   }
 
-  /* Portfolio section centered */
+  nav a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  /* Adjust spacing for portfolio grid */
   .portfolio-grid {
-    display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     gap: 25px;
-    width: 100%;
   }
 
   .project {
@@ -222,12 +226,13 @@
     flex-direction: column;
     align-items: center;
   }
+
   .video-container video {
     width: 90%;
     height: auto;
   }
 
-  /* Centered Maya grid */
+  /* Maya grid fix */
   .maya-grid {
     grid-template-columns: 1fr;
     justify-items: center;
@@ -237,11 +242,12 @@
     width: 90%;
   }
 
-  /* Center contact + hire me boxes */
+  /* Contact + Hire me boxes center */
   .contact, .hireme {
     text-align: center;
     padding: 20px;
   }
+
   .hireme-box {
     width: 90%;
     margin: 0 auto;
