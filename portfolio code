@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #161b22;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #e63946;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #e63946;
+    }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #0d1117, #161b22);
+      padding: 20px;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+    }
+    .hero span {
+      color: #e63946;
+    }
+    .hero a {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #e63946;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .hero a:hover {
+      background: #b92d39;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+    h2 {
+      color: #e63946;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+
+    /* About */
+    .about-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .about-content img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 3px solid #e63946;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .about-content p {
+      text-align: justify;
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    /* Skills */
+    .skills-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 12px;
+      align-items: center;
+    }
+    .skill-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      background: #0f1418;
+      padding: 16px;
+      border-radius: 12px;
+      transition: transform 220ms ease, box-shadow 220ms ease;
+      border: 2px solid #e63946;
+    }
+    .skill-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(230,57,70,0.6);
+    }
+    .icon {
+      width: 72px;
+      height: 72px;
+    }
+    .skill-label {
+      font-size: 0.95rem;
+      color: #dfe7ee;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* Software lines block */
+    .software-block {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #0f1418;
+      border: 1px solid rgba(230,57,70,0.12);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      line-height: 1.6;
+      color: #c9d1d9;
+    }
+    .software-block p {
+      margin: 8px 0;
+      font-size: 1.05rem;
+    }
+    .software-block strong {
+      color: #e63946;
+    }
+
+    /* Responsive tweak */
+    @media (max-width: 768px) {
+      .about-content { flex-direction: column; text-align: center; }
+      .skills-icons { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .skills-icons { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#hireme" class="hireme-btn">Hire Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h2>Hello, I'm <span>Maheswari</span></h2>
+    <p>A passionate Graphic Designer. I design. I animate. I create. Whether it’s branding, editing, or 3D modeling, I bring ideas to life with creativity and style.</p>
+    <a href="#hireme">Hire Me</a>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="C:\Users\M.Maheswari\Downloads\WhatsApp Image 2025-09-13 at 8.15.32 PM.jpeg" alt="Maheswari">
+      <p>I’m Maheswari, a passionate graphic and motion designer who loves turning ideas into visuals. From logos to 3D models, I enjoy creating designs that are clean, modern, and memorable. With strong skills in Photoshop, Illustrator, Maya, and After Effects, I specialize in both 2D and 3D design. I aim to bring creativity and precision together to make impactful visuals that connect with people.</p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skills-icons">
+
+      <!-- Photoshop -->
+      <div class="skill-card" title="Photoshop">
+        <svg class="icon" viewBox="0 0 100 100">
+          <rect x="4" y="4" width="92" height="92" rx="12" ry="12" fill="#001E36"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="44" font-weight="700" fill="#1EA7FF">Ps</text>
+        </svg>
+        <div class="skill-label">Photoshop</div>
+      </div>
+
+      <!-- Illustrator -->
+      <div class="skill-card" title="Illustrator">
+        <svg class="icon" viewBox="0 0 100 100">
+          <rect x="4" y="4" width="92" height="92" rx="12" ry="12" fill="#330000"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="40" font-weight="700" fill="#FF9A00">Ai</text>
+        </svg>
+        <div class="skill-label">Illustrator</div>
+      </div>
+
+      <!-- Maya -->
+      <div class="skill-card" title="Autodesk Maya">
+        <svg class="icon" viewBox="0 0 100 100">
+          <rect x="4" y="4" width="92" height="92" rx="12" ry="12" fill="#007f8a"/>
+          <path d="M18 74 L32 26 L50 58 L68 26 L82 74" fill="none" stroke="#B9FFF6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="skill-label">Maya</div>
+      </div>
+
+      <!-- After Effects -->
+      <div class="skill-card" title="After Effects">
+        <svg class="icon" viewBox="0 0 100 100">
+          <rect x="4" y="4" width="92" height="92" rx="12" ry="12" fill="#1F0033"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#CF96FD">Ae</text>
+        </svg>
+        <div class="skill-label">After Effects</div>
+      </div>
+
+      <!-- Premiere Pro -->
+      <div class="skill-card" title="Premiere Pro">
+        <svg class="icon" viewBox="0 0 100 100">
+          <rect x="4" y="4" width="92" height="92" rx="12" ry="12" fill="#22005C"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#EA77FF">Pr</text>
+        </svg>
+        <div class="skill-label">Premiere Pro</div>
+      </div>
+
+      <!-- Canva -->
+      <div class="skill-card" title="Canva">
+        <svg class="icon" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="44" fill="#00C4CC"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Georgia" font-size="46" font-weight="700" fill="#ffffff" style="font-style:italic">C</text>
+        </svg>
+        <div class="skill-label">Canva</div>
+      </div>
+
+      <!-- Animate CC -->
+      <div class="skill-card" title="Animate CC">
+        <svg class="icon" viewBox="0 0 100 100">
+          <rect x="4" y="4" width="92" height="92" rx="12" ry="12" fill="#FF6A00"/>
+          <text x="50" y="60" text-anchor="middle" font-family="Arial" font-size="38" font-weight="700" fill="#FFD9B0">An</text>
+        </svg>
+        <div class="skill-label">Animate CC</div>
+      </div>
+
+    </div>
+
+    <div class="software-block">
+      <p><strong>Photoshop, Illustrator, Canva and Animate</strong> — I design crisp 2D visuals, branding and social templates.</p>
+      <p><strong>After Effects, Premiere Pro and Autodesk Maya</strong> — I create motion graphics, video edits and 3D animations.</p>
+    </div>
+  </section>
+</body>
+</html>
+
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <h2>My Work</h2>
+  <div class="portfolio-grid">
+    <div class="project">
+      <img src="C:\Users\M.Maheswari\Downloads\TYPOGRAPHY.jpg" alt="Project 1">
+      <h3>Typography</h3>
+    </div>
+    <div class="project">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot 2024-10-14 190837.png" alt="Project 2">
+      <h3>Newspaper Ad</h3>
+    </div>
+    <div class="project">
+      <img src="C:\Users\M.Maheswari\Downloads\LOGO.jpg" alt="Project 3">
+      <h3>Logo</h3>
+    </div>
+    <div class="project">
+      <img src="C:\Users\M.Maheswari\Downloads\WhatsApp Image 2024-10-15 at 10.38.51 PM.jpeg" alt="Project 4">
+      <h3>Movie Poster</h3>
+    </div>
+<div class="portfolio-grid">
+    <div class="project">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot 2024-10-13 115827.png" alt="Project 1">
+      <h3>Advertisement 1</h3>
+    </div>
+    
+    </div>
+    <div class="project">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot 2024-10-14 191037.png" alt="Project 3">
+      <h3>Advertisement 2</h3>
+    </div>
+<div class="project">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot 2024-10-13 120204.png" alt="Project 4">
+      <h3>Advertisement 3</h3>
+    </div>
+<div class="project">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot 2025-03-10 221927.png" alt="Project 2">
+      <h3>Story board</h3>
+    </div>
+<style>
+  .video-container {
+    display: flex;
+    gap: 10px; /* small space between videos */
+  }
+  .video-container video {
+    width: 550px;
+    height: 300px;
+  }
+</style>
+
+
+<div class="video-container">
+  <video controls>
+    <source src="C:\Users\M.Maheswari\OneDrive\圖片\Pink And White Motion Style Beauty Care Instagram Post.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <video controls>
+    <source src="C:\Users\M.Maheswari\OneDrive\圖片\Brown and Beige Minimalist Bakery Shop Promotion Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>  </div>
+</section>
+
+<style>
+  /* Portfolio Section */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* side by side layout */
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .project {
+    background: #161b22;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project img {
+    width: 100%;          /* fits box width */
+    max-height: 180px;    /* smaller size */
+    object-fit: contain;  /* no cut, keeps full image */
+    border-radius: 8px;
+  }
+
+  .project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+  }
+
+  .project h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #e63946;
+  }
+</style>
+<!-- Add in <head> -->
+<script type="module" src="C:\Users\M.Maheswari\OneDrive\Desktop\Naan than\New folder"></script>
+
+<!-- In body -->
+<model-viewer src="your_model.glb" 
+              alt="Maya Model" 
+              auto-rotate 
+              camera-controls 
+              ar
+              style="width: 600px; height: 400px;">
+</model-viewer>
+<!-- Maya 3D Work Section -->
+<section class="maya-work" id="maya">
+  <h2>My Maya 3D Work</h2>
+  
+  <div class="maya-grid">
+
+   
+
+  </div>
+</section>
+
+<style>
+  /* Maya 3D Work Section */
+  .maya-work {
+    padding: 60px 40px;
+    background: #0d1117;
+    text-align: center;
+  }
+
+  .maya-work h2 {
+    color: #e63946;
+    margin-bottom: 30px;
+  }
+
+  .maya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .maya-item {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .maya-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+  }
+
+  .maya-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #0f1418;
+  }
+
+  .maya-item h3 {
+    color: #e63946;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .maya-item img {
+      height: 220px;
+    }
+  }
+</style>
+
+
+ <div class="maya-grid">
+
+  <div class="maya-item">
+    <img src="C:\Users\M.Maheswari\Downloads\WhatsApp Image 2025-10-16 at 7.13.15 PM.jpeg">
+    <h3>Front view</h3>
+  </div>
+
+  <div class="maya-item">
+    <img src="C:\Users\M.Maheswari\Downloads\WhatsApp Image 2025-10-16 at 7.13.25 PM.jpeg">
+    <h3>Perspective view</h3>
+  </div>
+
+  <div class="maya-item">
+    <img src="C:\Users\M.Maheswari\Downloads\WhatsApp Image 2025-10-16 at 8.11.33 PM.jpeg">
+    <h3>Render view</h3>
+  </div>
+
+</div>
+</section>
+
+<style>
+  /* Maya 3D Work Section */
+  .maya-work {
+    padding: 60px 40px;
+    background: #0d1117;
+    text-align: center;
+  }
+
+  .maya-work h2 {
+    color: #e63946;
+    margin-bottom: 30px;
+  }
+
+  .maya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 25px; /* space between columns */
+    row-gap: 60px; /* 👈 extra vertical gap between image rows */
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .maya-item {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .maya-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+  }
+
+  .maya-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #0f1418;
+  }
+
+  .maya-item h3 {
+    color: #e63946;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .maya-item img {
+      height: 220px;
+    }
+  }
+</style>
+ <div class="maya-grid">
+
+  <div class="maya-item">
+    <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot (43).png">
+    <h3>Front view</h3>
+  </div>
+
+  <div class="maya-item">
+    <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot (44).png">
+    <h3>Perspective view</h3>
+  </div>
+
+  <div class="maya-item">
+    <img src="C:\Users\M.Maheswari\Downloads\ChatGPT Image Oct 16, 2025, 07_24_45 PM.png">
+    <h3>Render view</h3>
+  </div>
+
+</div>
+</section>
+
+<style>
+  /* Maya 3D Work Section */
+  .maya-work {
+    padding: 60px 40px;
+    background: #0d1117;
+    text-align: center;
+  }
+
+  .maya-work h2 {
+    color: #e63946;
+    margin-bottom: 30px;
+  }
+
+  .maya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 25px; /* space between columns */
+    row-gap: 60px; /* 👈 extra vertical gap between image rows */
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .maya-item {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .maya-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+  }
+
+  .maya-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #0f1418;
+  }
+
+  .maya-item h3 {
+    color: #e63946;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .maya-item img {
+      height: 220px;
+    }
+  }
+</style>
+
+
+
+<style>
+  /* Maya 3D Work Section */
+  .maya-work {
+    padding: 60px 40px;
+    background: #0d1117;
+    text-align: center;
+  }
+
+  .maya-work h2 {
+    color: #e63946;
+    margin-bottom: 30px;
+  }
+
+  .maya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .maya-item {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .maya-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+  }
+
+  .maya-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #0f1418;
+  }
+
+  .maya-item h3 {
+    color: #e63946;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .maya-item img {
+      height: 220px;
+    }
+  }
+</style>
+
+
+
+
+ <div class="maya-grid">
+
+    <div class="maya-item">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot (50).png">
+      <h3>Front view</h3>
+    </div>
+
+    <div class="maya-item">
+      <img src="C:\Users\M.Maheswari\OneDrive\圖片\Screenshots\Screenshot (51).png">
+      <h3>Perspective view</h3>
+    </div>
+
+    <div class="maya-item">
+      <img src="C:\Users\M.Maheswari\Downloads\ChatGPT Image Oct 16, 2025, 07_21_02 PM.png">
+      <h3>Render view</h3>
+    </div>
+
+
+  </div>
+</section>
+
+<style>
+  /* Maya 3D Work Section */
+  .maya-work {
+    padding: 60px 40px;
+    background: #0d1117;
+    text-align: center;
+  }
+
+  .maya-work h2 {
+    color: #e63946;
+    margin-bottom: 30px;
+  }
+
+  .maya-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .maya-item {
+    background: #161b22;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .maya-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+  }
+
+  .maya-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: #0f1418;
+  }
+
+  .maya-item h3 {
+    color: #e63946;
+    margin-top: 10px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .maya-item img {
+      height: 220px;
+    }
+  }
+</style>
+
+
+
+
+
+
+ 
+  <!-- Contact Section -->
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <div class="contact-details">
+    <p>Email: <a href="mailto:msmahiaug02@gmail.com">msmahiaug02@gmail.com</a></p>
+  
+    <p>Phone: +91 9363979695</p>
+  </div>
+</section>
+
+<!-- Hire Me Section -->
+<section class="hireme" id="hireme">
+  <div class="hireme-box">
+    <h2>🚀 Ready to work together?</h2>
+    <p>I’d love to bring your ideas to life with creative designs and modern visuals.</p>
+    <a href="#contact">Hire Me</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Maheswari | All Rights Reserved</p>
+</footer>
+
+<style>
+  /* Contact Section */
+  .contact {
+    text-align: center;
+    margin: 40px auto;
+  }
+  .contact a {
+    color: #e63946;
+    text-decoration: none;
+  }
+  .contact a:hover {
+    text-decoration: underline;
+  }
+
+  /* Hire Me Section */
+  .hireme {
+    text-align: center;
+    margin: 60px auto;
+  }
+  .hireme-box {
+    display: inline-block;
+    background: #161b22;
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #e63946;
+  }
+  .hireme-box h2 {
+    margin-bottom: 10px;
+  }
+  .hireme-box a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: #e63946;
+    color: #fff;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  .hireme-box a:hover {
+    background: #b92d39;
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    background: #161b22;
+    padding: 20px;
+    margin-top: 40px;
+    color: #aaa;
+  }
+</style>
